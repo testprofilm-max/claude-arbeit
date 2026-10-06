@@ -1,0 +1,6 @@
+# Persönliche Dateien – nicht ins Projekt-Archiv
+CLAUDE.local.md
+.claude/settings.local.json
+
+# macOS-Systemdateien
+.DS_Store
