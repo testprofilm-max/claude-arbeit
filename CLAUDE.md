@@ -1,26 +1,40 @@
-# Claude Arbeit
+# CLAUDE.md
 
-<!-- Diese Datei liest Claude zu Beginn jeder Sitzung. Kurz halten (unter 200 Zeilen). -->
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Worum geht es
+<!-- Kurz halten. Deutsch. Ergänzt die globale ~/.claude/CLAUDE.md, die Uwes Vorgaben enthält. -->
 
-Zentraler Arbeitsordner für die Arbeit mit Claude Code.
-Die Arbeit ist in drei Bereiche getrennt: Label-23 / Boxing Connection,
-Die Textilfabrik und Privates. Jeder Bereich hat einen eigenen Ordner.
-Hier entstehen Texte, Content-Pläne, Auswertungen und Shop-Aufgaben.
-Ergebnisse werden im passenden Ordner abgelegt und per Git gesichert.
-Sprache ist Deutsch, Ansprache direkt und ohne Marketing-Floskeln.
+## Worum es geht
 
-## Ziele
+Uwes Arbeitsordner. Kein Code-Projekt: hier entstehen Auswertungen, Berichte,
+Analysen und Planungen für Label-23 / Boxing Connection und Die Textilfabrik
+sowie private Auswertungen. Nichts zu bauen, zu linten oder zu testen.
+Ergebnisse werden als Dateien abgelegt und per Git nach GitHub gesichert.
 
-## Ordnerstruktur
+## Ordner
 
-- `Label-23/` – alles zu Label-23 / Boxing Connection
-- `Textilfabrik/` – alles zu Die Textilfabrik
-- `Privat/` – private Themen, nur lokal (in .gitignore), nicht mit den Marken vermischen
-- `.claude/settings.json` – Projekteinstellungen (z. B. Berechtigungen)
-- `.claude/rules/` – Regeln zu einzelnen Themen
-- `.claude/skills/` – wiederverwendbare Abläufe (Aufruf per /name)
-- `.claude/agents/` – spezialisierte Helfer für Teilaufgaben
+| Ordner | Zweck |
+|---|---|
+| `Label-23/` | Alles zu Label-23. Rohdaten (Excel, PDF, CSV-Exporte) in `Eingang/`, fertige Auswertungen daneben. |
+| `Textilfabrik/` | Alles zur Textilfabrik, gleicher Aufbau. |
+| `Privat/` | Finanzen, Sport, Gesundheit, Ernährung. Rein privat, steht in `.gitignore`, geht nie nach GitHub. NIE mit den Marken vermischen. |
+| `tmp/` | Temp-Dateien und Zwischenstände. Steht in `.gitignore`. |
+| `.claude/` | Projekteinstellungen, Regeln, Skills, Agents (noch leer). |
 
-## Arbeitsregeln
+Neues Vorhaben: Unterordner `<Bereich>/<Vorhaben>/` mit kurzer CLAUDE.md
+(Zweck, Quellen, Ergebnisform, Empfänger) anlegen.
+
+## Git
+
+- Branch `main`, Remote `origin` = `github.com/testprofilm-max/claude-arbeit` (Uwes Konto).
+- Commits nur auf Uwes Anweisung, Commit-Nachrichten auf Deutsch.
+- NIE eigenständig `git push`. Vor jedem Commit prüfen, dass nichts aus `Privat/`
+  oder `tmp/` dabei ist.
+- Ordner unter `*/.claude/worktrees/` sind Git-Worktrees anderer Claude-Sitzungen,
+  kein Arbeitsinhalt. Nicht bearbeiten, nicht committen (stehen in `.gitignore`).
+
+## Nicht nutzen
+
+Die synchronisierten Skills Arthur, Eddi, Toni, Texter, Kritiker, Markant-Radar,
+Instagram-Analytics, Textilfabrik-Designer und -Kritiker sind Marks Agenten mit
+Pfaden auf einem anderen Rechner. Nicht auslösen, außer Uwe verlangt es ausdrücklich.

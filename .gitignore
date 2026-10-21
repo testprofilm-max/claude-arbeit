@@ -7,3 +7,10 @@ CLAUDE.local.md
 
 # Privater Bereich – bleibt nur lokal, wird nicht hochgeladen
 Privat/
+
+# Git-Worktrees anderer Claude-Sitzungen
+.claude/worktrees/
+**/.claude/worktrees/
+
+# Temp-Dateien
+tmp/
